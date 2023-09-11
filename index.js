@@ -14,7 +14,8 @@ const storage = multer.diskStorage({
     },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage });  // a Multer middleware instance called upload using the previously configured storage settings. This middleware is used to handle file uploads.
+
 
 app.post('/upload', upload.single('file'), (req, res) => {
     // handle uploaded file here ,i.e display metadata 
